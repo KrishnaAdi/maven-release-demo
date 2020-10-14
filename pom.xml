@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>maven.demo.performing</groupId>
+  <artifactId>trial1</artifactId>
+  <version>0.0.1</version>
+  <name>Trial 1</name>
+  <description>This is my first trial.</description>
+  
+  <distributionManagement>
+  	<repository>
+  		<id>local-file</id>
+  		<url>file://${project.build.directory}/localfile</url>
+  	</repository>
+  </distributionManagement>
+  
+  <scm>
+  
+  	<connection>scm:git:https://github.com/KrishnaAdi/maven-release-demo</connection>
+    <tag>trial1-0.0.1</tag>
+  </scm>
+  
+  <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.0</version>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.22.0</version>
+        </plugin>
+        
+        <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <configuration>
+		        <source>1.6</source>
+		        <target>1.6</target>
+		    </configuration>
+		</plugin>
+        
+    </plugins>
+  </build>
+	<!-- ... -->
+	<dependencies>
+	    <!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.1</version>
+		    <scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	
+
+
+</project>
